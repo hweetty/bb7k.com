@@ -1,0 +1,9 @@
+{
+    "name": "bb7k.com",
+    "description": "website",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "4.x"
+    }
+}

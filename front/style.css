@@ -1,34 +1,56 @@
 .header {
-	background-color: #1c1c1c;
 	width: 100vw;
 	height: 100vh;
-	position: absolute;
+	position: relative;
 }
-/* width = 664px */
 .header img {
 	position: relative;
 	display: block;
-	margin-top: 42px;
-	margin-left: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	top: calc(100vh - 905px); /* calc(-800px + 100vh - 105px) */
+-webkit-transition: top 0.2s;
+    	  transition: top 0.2s;
 }
+@media (max-width: 768px) {
+	.header img {
+		margin: 0;
+		width: 100%;
+		min-width: 400px;
+		max-width: 100%;
+		top:0;
+	}
+}
+@media (max-width: 400px) {
+	.header img {
+		left: calc(50vw - 200px); /* calc((-400px + 100vw) / 2) */
+	}
+}
+
 .header-panel {
-	width: 300px;
-	height: 200px;
-	position: fixed;
-	top: calc((100vh - 200px) / 3);
-	right: calc((100vw - 706px - 300px) / 2);
+	position: relative;
+	max-width: 768px;
+	width: 100%;
+	height: 70px;
+	margin: auto;
+	top: calc(100vh - 875px); /* calc(-800px + 100vh - 75px); */
+	text-align: center;
 }
-.header h2 {
-	font-size: 25px;
-	color: rgb(225, 198, 80);
-	margin-bottom: 50px;
+@media (max-width: 550px) {
+	.header-panel {
+		display: block;
+		width: 100%;
+		left: 0;
+		top: calc(20px);
+	}
 }
 a.btn { text-decoration: none; }
 .btn {
 	border-radius: 3px;
 	background-color: #333;
 	color: #ddd;
-	display: block;
+	display: inline-block;
+	width: 200px;
 	text-align: center;
 	padding: 12px;
 	padding-right: 0;
@@ -37,6 +59,13 @@ a.btn { text-decoration: none; }
 	font-weight: 200;
 	font-family: "Source Code Pro", "Courier New", monospace;
 }
+@media (max-width: 550px) {
+	.btn {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 .btn-download { background-color: rgb(158,35,79); }
 .btn-download:hover { background-color: rgb(171, 51, 94); }
 .btn-download:active { background-color: rgba(158,35,79,0.8); }
@@ -44,9 +73,14 @@ a.btn { text-decoration: none; }
 .btn-github:hover { background-color: rgb(90, 42, 126); }
 .btn-github:active { background-color: rgba(77,26,116,0.8); }
 
+.gold {
+	color: rgb(225, 198, 80);
+}
 html, body {
+	background-color: #1c1c1c;
 	font-family: "Source Code Pro", "Courier New", monospace;
 	width: 100%;
+	min-width: 320px;
 	height: 100%;
 	margin: 0;
 }
