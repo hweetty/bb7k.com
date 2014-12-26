@@ -26,6 +26,11 @@
 		left: calc(50vw - 200px); /* calc((-400px + 100vw) / 2) */
 	}
 }
+@media (max-width: 400px) and (-webkit-min-device-pixel-ratio: 2) {
+	.header img {
+		left: calc(50vw - 199.5px);
+	}
+}
 
 .header-panel {
 	position: relative;
@@ -36,12 +41,13 @@
 	top: calc(100vh - 875px); /* calc(-800px + 100vh - 75px); */
 	text-align: center;
 }
-@media (max-width: 550px) {
+@media (max-width: 768px) {
 	.header-panel {
 		display: block;
 		width: 100%;
+		margin: 25px auto;
 		left: 0;
-		top: calc(20px);
+		top: 0;
 	}
 }
 a.btn { text-decoration: none; }
@@ -59,7 +65,7 @@ a.btn { text-decoration: none; }
 	font-weight: 200;
 	font-family: "Source Code Pro", "Courier New", monospace;
 }
-@media (max-width: 550px) {
+@media (max-width: 768px) {
 	.btn {
 		display: block;
 		margin-left: auto;
